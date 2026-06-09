@@ -1,0 +1,73 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeInUp 0.5s ease forwards;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: 0 8px 32px var(--glass-shadow);
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 2rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.current {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.temperatures {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.temperatures p {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.temperatures span {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--text-primary);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 2rem;
+  }
+}
